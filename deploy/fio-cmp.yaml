@@ -88,6 +88,8 @@ spec:
           mountPath: /volume1/
         - name: vol2
           mountPath: /volume2/
+        - mountPath: /temp
+          name: temp-storage
         command: ["bash", "/fio/cmp_run.sh"]
         #volumeDevices:
         #- name: vol1
@@ -102,4 +104,6 @@ spec:
       - name: vol2
         persistentVolumeClaim:
           claimName: kbench-pvc-2
+      - name: temp-storage
+        emptyDir: {}
   backoffLimit: 0
