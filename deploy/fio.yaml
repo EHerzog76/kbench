@@ -65,6 +65,8 @@ spec:
         volumeMounts:
         - name: vol
           mountPath: /volume/
+        - mountPath: /temp
+          name: temp-storage
         #volumeDevices:
         #- name: vol
         #  devicePath: /volume/test
@@ -73,4 +75,6 @@ spec:
       - name: vol
         persistentVolumeClaim:
           claimName: kbench-pvc
+      - name: temp-storage
+        emptyDir: {}
   backoffLimit: 0
