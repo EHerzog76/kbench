@@ -17,7 +17,7 @@ fi
 
 RESULT=${FIRST_VOL_NAME}_vs_${SECOND_VOL_NAME}.summary
 RESULT="${RESULT//\//-}"
-RESULT="/temp/${RESULT}
+RESULT="/temp/${RESULT}"
 
 if [[ ! ${FIRST_VOL_NAME} =~ ^[/]temp[/].* ]]; then
         FIRST_VOL_NAME="/temp/${FIRST_VOL_NAME}"
