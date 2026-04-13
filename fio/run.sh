@@ -5,6 +5,7 @@ set -e
 CURRENT_DIR="$(dirname "$(readlink -f "$0")")"
 
 TEST_FILE=$1
+cd /temp
 
 # cmdline overrides the environment variable
 if [ -z "$TEST_FILE" ]; then
