@@ -28,7 +28,10 @@ if [ -z "$TEST_OUTPUT" ]; then
        TEST_OUTPUT=$OUTPUT
 fi
 if [ -z $TEST_OUTPUT ]; then
-	TEST_OUTPUT="/temp/test_device"
+        TEST_OUTPUT="/temp/test_device"
+fi
+if [[ ! ${TEST_OUTPUT} =~ ^[/]temp[/].* ]]; then
+        TEST_OUTPUT="/temp/${TEST_OUTPUT}"
 fi
 echo TEST_OUTPUT_PREFIX: $TEST_OUTPUT
 
